@@ -47,10 +47,10 @@ function EncryptMenu() -- Menu d'encryption
   local crypted = Encrypt(phrase,key) -- Execute la fonction de chiffrement
   if not crypted then
     CleanMenu()
-    print("Une erreur est survenue. Pour l'instant seuls")
-    print("les caractères alphanumériques et la ponctuation")
+    print("Une erreur est survenue. Les crochets")
+    print("de type [] et autres symboles alphanumériques")
     print("sont pris en charge. Veuillez donc éviter les")
-    print("accents ou symboles spéciaux.")
+    print("symboles spéciaux.")
     MainMenu()
     return
   end
@@ -152,8 +152,8 @@ function KeyImportMenu()
     MainMenu()
     return false
   end
-  if string.len(k) > 512 or string.len(k) < 512 then -- Vérifie que la clé contienne tous les caractères nécessaires
-    print("Clé invalide ou caractères manquants")
+  if string.len(k) > 400 or string.len(k) < 400 then -- Vérifie que la clé contienne tous les caractères nécessaires
+    print("Clé invalide ou caractères manquants / en trop")
     MainMenu()
     return false -- Renvoie vers le menu dans le cas contraire
   end
