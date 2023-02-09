@@ -15,16 +15,16 @@ function MainMenu() -- Menu principal
   print("===========================================")
   print("Que souhaitez-vous faire ?")
   print("1 - Générer / Importer une clé")
-  print("2 - Déchiffrer une phrase")
-  print("3 - Chiffrer une phrase")
+  print("2 - Chiffrer une phrase")
+  print("3 - Déchiffrer une phrase")
   print("Saisissez un chiffre puis faites Entrée pour valider votre choix")
   local opt = tonumber(io.read()) -- Lit l'option choisie
   if opt == 1 then -- Lance le menu selon le choix fait
     KeyMenu()
   elseif opt == 2 then
-    DecryptMenu()
-  elseif opt == 3 then
     EncryptMenu()
+  elseif opt == 3 then
+    DecryptMenu()
   else
     FailMessage() -- Si aucun choix identifié alors message d'erreur
   end
