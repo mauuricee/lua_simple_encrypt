@@ -152,7 +152,7 @@ function KeyImportMenu()
     MainMenu()
     return false
   end
-  if string.len(k) > 400 or string.len(k) < 400 then -- Vérifie que la clé contienne tous les caractères nécessaires
+  if string.len(k) > 392 or string.len(k) < 392 then -- Vérifie que la clé contienne tous les caractères nécessaires
     print("Clé invalide ou caractères manquants / en trop")
     MainMenu()
     return false -- Renvoie vers le menu dans le cas contraire
